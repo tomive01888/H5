@@ -2,25 +2,28 @@ import {defineField, defineType} from 'sanity'
 import {MdPerson as icon} from 'react-icons/md'
 
 export default defineType({
-  name: 'person',
-  title: 'Person',
+  name: 'herosection',
+  title: 'Hero section',
   type: 'document',
   icon,
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title for page',
       type: 'string',
-      description: 'Please use "Firstname Lastname" format',
+      description: 'This will be used on the index page',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 100,
-      },
+      name: 'herotext',
+      title: 'Hero text',
+      type: 'blockContent',
+      description: 'This will be used on the index page',
+    }),
+    defineField({
+      name: 'buttonText',
+      title: 'Button text',
+      type: 'string',
+      description: 'This text is to be used on the hero button',
     }),
     defineField({
       name: 'image',
@@ -35,3 +38,13 @@ export default defineType({
     select: {title: 'name', media: 'image'},
   },
 })
+
+// defineField({
+//   name: 'slug',
+//   title: 'Slug',
+//   type: 'slug',
+//   options: {
+//     source: 'name',
+//     maxLength: 100,
+//   },
+// }),

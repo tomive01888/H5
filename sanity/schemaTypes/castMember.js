@@ -11,12 +11,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'person',
-      title: 'Actor',
-      type: 'reference',
-      to: [{type: 'person'}],
-    }),
-    defineField({
       name: 'externalId',
       title: 'External ID',
       type: 'number',
@@ -27,11 +21,4 @@ export default defineType({
       type: 'string',
     }),
   ],
-  preview: {
-    select: {
-      subtitle: 'characterName',
-      title: 'person.name',
-      media: 'person.image',
-    },
-  },
 })
