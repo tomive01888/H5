@@ -55,12 +55,6 @@ export default defineType({
       type: 'array',
       of: [{type: 'castMember'}],
     }),
-    defineField({
-      name: 'crewMembers',
-      title: 'Crew Members',
-      type: 'array',
-      of: [{type: 'crewMember'}],
-    }),
   ],
   preview: {
     select: {
