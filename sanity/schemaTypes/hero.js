@@ -14,10 +14,10 @@ export default defineType({
       description: 'This will be used on the index page',
     }),
     defineField({
-      name: 'herotext',
-      title: 'Hero text',
+      name: 'description',
+      title: 'Description',
       type: 'blockContent',
-      description: 'This will be used on the index page',
+      description: 'This will be used as paragraph on the index page',
     }),
     defineField({
       name: 'buttonText',

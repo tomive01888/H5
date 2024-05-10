@@ -1,5 +1,5 @@
 import { mainKey } from '$env/static/private'
-import { client } from "@/utils/sanity/client"
+import { client } from "../utils/sanity/client"
 
 const haloWeapon = "https://www.haloapi.com/metadata/h5/metadata/weapons"
 
@@ -25,17 +25,13 @@ export async function load(){
     
 }
 
-
-
 // Fetch content with GROQ
 async function getContent() {
   const CONTENT_QUERY = `*[_type == "herosection"] {
-  ...,
-  steps[] {
-    onboardingStep {
-      ...
-    }
-  }
+    title,
+    description,
+    buttonText,
+    image,
 }
 `
   const content = await client.fetch(CONTENT_QUERY)
