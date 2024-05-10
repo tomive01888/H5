@@ -1,59 +1,49 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	export let data
+	console.log(data);
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Halo</title>
+	<meta name="description" content="Hallloo" />
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+	<h1>Halo 5</h1>
+	<p>Join the Banished. In Operation: Banished Honor, liberate yourself through the teachings of Atriox and claim your spoils. The free 20-tier Operation Pass is full of powerful customization rewards to overcome your foes. Upgrade to the Premium Pass to obtain the Legendary Armor Coating, Fuego Flame, and strike fear into the hearts of your opponents. The Premium Pass comes with an additional Challenge Slot, bonus XP, and never expires.</p>
+	<button>JOIN NOW</button>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
 </section>
 
+<!-- {#each data.weapons as weapon}
+	<p>{weapon.name}</p>
+	<img src="{weapon.smallIconImageUrl}" alt="">
+{/each} -->
+
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
 
-	h1 {
+	section{
+		background-image: url(Halo-Banished.avif);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		width: 100%;
-	}
-
-	.welcome {
-		display: block;
+		height: 1000px;
 		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		&:after{
+			content: "";
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,1) 3%, rgba(0,0,0,0.1386204139859069) 40%, rgba(255,255,255,0) 100%);
+
+		}
+
+		
 	}
 </style>
